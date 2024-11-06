@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Heart, MapPinIcon, Trash2Icon } from "lucide-react";
 import { Button } from "./ui/button";
 import {

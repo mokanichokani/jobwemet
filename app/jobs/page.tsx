@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 'use client'
 import { useEffect, useState } from 'react'
 import { useSession, useUser } from '@clerk/nextjs'

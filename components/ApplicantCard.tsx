@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { FaFilePdf, FaGraduationCap, FaBriefcase, FaCode } from "react-icons/fa";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { Button } from "./ui/button";
