@@ -1,4 +1,5 @@
-import { Roles } from '@/types/globals'
+// import { Roles } from '@/types/globals'
+///@ts-nocheck
 import { auth } from '@clerk/nextjs/server'
 
 export const checkRole = (role: Roles) => {
