@@ -31,3 +31,8 @@ export function slugify(value: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+export function capitalize(value: string): string {
+  if (value.length === 0) return value;
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
