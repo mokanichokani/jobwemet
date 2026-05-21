@@ -6,6 +6,17 @@ import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { useSession } from "@clerk/nextjs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
+/**
+ * Returns the first letter of the applicant's first and last name,
+ * formatted as uppercase initials for display in avatars and badges.
+ * Example: getApplicantInitials("Jane", "Doe") → "JD".
+ */
+export function getApplicantInitials(firstName: string, lastName: string): string {
+  const f = firstName.trim().charAt(0).toUpperCase();
+  const l = lastName.trim().charAt(0).toUpperCase();
+  return `${f}${l}`;
+}
+
 const ApplicantCard = ({ applicant }) => {
   const { session } = useSession()
 
