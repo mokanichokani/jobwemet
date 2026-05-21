@@ -40,3 +40,9 @@ export function capitalize(value: string): string {
 export function reverseString(value: string): string {
   return value.split('').reverse().join('');
 }
+
+export function wordCount(value: string): number {
+  const trimmed = value.trim();
+  if (trimmed.length === 0) return 0;
+  return trimmed.split(/\s+/).length;
+}
