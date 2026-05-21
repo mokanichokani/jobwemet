@@ -41,6 +41,11 @@ export function reverseString(value: string): string {
   return value.split('').reverse().join('');
 }
 
+/** Returns true when value contains only whitespace or is empty. */
+export function isBlank(value: string): boolean {
+  return value.trim().length === 0;
+}
+
 export function wordCount(value: string): number {
   const trimmed = value.trim();
   if (trimmed.length === 0) return 0;
