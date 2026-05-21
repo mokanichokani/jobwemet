@@ -46,3 +46,7 @@ export function wordCount(value: string): number {
   if (trimmed.length === 0) return 0;
   return trimmed.split(/\s+/).length;
 }
+
+export function isAlpha(value: string): boolean {
+  return /^[A-Za-z]+$/.test(value);
+}
