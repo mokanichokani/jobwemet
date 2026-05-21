@@ -159,3 +159,11 @@ const ApplicantCard = ({ applicant }) => {
 };
 
 export default ApplicantCard;
+
+/**
+ * Returns true if the applicant has any code-quality flag (placeholder for future filtering).
+ * Example: isFlaggedApplicant({ flags: ["spam"] }) → true.
+ */
+export function isFlaggedApplicant(applicant: { flags?: string[] }): boolean {
+  return (applicant.flags?.length ?? 0) > 0;
+}
