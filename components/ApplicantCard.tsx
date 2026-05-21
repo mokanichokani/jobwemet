@@ -168,6 +168,13 @@ export function isFlaggedApplicant(applicant: { flags?: string[] }): boolean {
   return (applicant.flags?.length ?? 0) > 0;
 }
 
+export function getApplicantRating(score: number): 'poor' | 'fair' | 'good' | 'excellent' {
+  if (score >= 90) return 'excellent';
+  if (score >= 70) return 'good';
+  if (score >= 50) return 'fair';
+  return 'poor';
+}
+
 export function getApplicantMatchScore(applicant: { skills?: string[]; requiredSkills?: string[] }): number {
   const skills = applicant.skills ?? [];
   const required = applicant.requiredSkills ?? [];
