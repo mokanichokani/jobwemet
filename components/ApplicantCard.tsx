@@ -17,6 +17,16 @@ export function getApplicantInitials(firstName: string, lastName: string): strin
   return `${f}${l}`;
 }
 
+/**
+ * Formats a numeric experience-in-years value as a human-readable string.
+ * Example: formatYearsOfExperience(0) → "Fresher", 1 → "1 year", 3 → "3 years".
+ */
+export function formatYearsOfExperience(years: number): string {
+  if (years <= 0) return "Fresher";
+  if (years === 1) return "1 year";
+  return `${years} years`;
+}
+
 const ApplicantCard = ({ applicant }) => {
   const { session } = useSession()
 
