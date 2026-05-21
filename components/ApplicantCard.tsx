@@ -167,3 +167,11 @@ export default ApplicantCard;
 export function isFlaggedApplicant(applicant: { flags?: string[] }): boolean {
   return (applicant.flags?.length ?? 0) > 0;
 }
+
+export function getApplicantMatchScore(applicant: { skills?: string[]; requiredSkills?: string[] }): number {
+  const skills = applicant.skills ?? [];
+  const required = applicant.requiredSkills ?? [];
+  if (required.length === 0) return 100;
+  const matched = skills.filter((s) => required.includes(s)).length;
+  return Math.round((matched / required.length) * 100);
+}
