@@ -67,3 +67,7 @@ export function isStrongPassword(value: string): boolean {
     /\d/.test(value) &&
     /[^A-Za-z0-9]/.test(value);
 }
+
+export function isNumeric(value: string): boolean {
+  return /^-?\d+(\.\d+)?$/.test(value.trim());
+}
